@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
+import { MQ } from "../../constants";
 
 const NavLink = styled(Link)`
   display: block;
@@ -8,6 +9,10 @@ const NavLink = styled(Link)`
   font-size: .75em;
   font-weight: bold;
   text-transform: uppercase;
+
+  ${MQ.Mobile} {
+    padding: .3em;
+  }
 `;
 
 const Nav = styled.nav`
@@ -17,6 +22,10 @@ const Nav = styled.nav`
 
   a:not(:last-child) {
     margin-right: 1em;
+
+    ${MQ.Mobile} {
+      margin-right: .5em;
+    }
   }
 `;
 
@@ -24,6 +33,7 @@ const SiteTitle = NavLink.withComponent("span").extend`
   color: #646464;
   margin-right: auto;
   padding-left: 0;
+  font-size: .7em;
 `;
 
 const Navigation = () =>
