@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import styled from "styled-components";
 
 import Container from "../../reusable/Container";
 import Main from "../../reusable/Main";
@@ -21,6 +22,15 @@ const fauxArticles = [
   }
 ];
 
+const SectionLabel = styled.p`
+  margin: 0;
+  margin-bottom: .75rem;
+  font-size: .8em;
+  font-weight: bold;
+  letter-spacing: 1.04px;
+  color: #646464;
+`;
+
 const Home = () =>
   <Container>
     <Helmet>
@@ -35,6 +45,8 @@ const Home = () =>
           Frontend Engineer making fun things in San Francisco.
         </Subtitle>
       </div>
+
+      <SectionLabel>LATEST ARTICLES</SectionLabel>
 
       {fauxArticles.map(article =>
         <ArticlePreview
