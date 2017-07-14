@@ -8,6 +8,19 @@ import { default as PageTitle } from "../../reusable/Title";
 import Subtitle from "../../reusable/Subtitle";
 import ArticlePreview from "../../reusable/ArticlePreview";
 
+const fauxArticles = [
+  {
+    title: "Higher-Order Components for Beginners",
+    subtitle: "A gentle introduction to Higher-Order Components",
+    image: "http://i.imgur.com/7fmZj5D.jpg"
+  },
+  {
+    title: "Math: the React.js Way",
+    subtitle: "Mathematicians HATE him for this one trick!",
+    image: "https://btnwtn.com/images/math-js-header.jpg"
+  }
+];
+
 const Home = () =>
   <Container>
     <Helmet>
@@ -23,11 +36,13 @@ const Home = () =>
         </Subtitle>
       </div>
 
-      <ArticlePreview
-        title="Math: the React.js Way"
-        subtitle="React is amazing, use it for everything."
-        image="https://btnwtn.com/images/math-js-header.jpg"
-      />
+      {fauxArticles.map(article =>
+        <ArticlePreview
+          style={{ marginBottom: "1.25em" }}
+          key={article.title}
+          {...article}
+        />
+      )}
     </Main>
   </Container>;
 
