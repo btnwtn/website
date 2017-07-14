@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import Container from "../../reusable/Container";
 import Main from "../../reusable/Main";
@@ -8,6 +9,9 @@ import Subtitle from "../../reusable/Subtitle";
 
 const Home = () =>
   <Container>
+    <Helmet>
+      <title>Brandon Newton</title>
+    </Helmet>
     <Navigation />
 
     <Main>

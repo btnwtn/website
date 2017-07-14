@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
@@ -11,6 +12,9 @@ import Home from "./pages/Home";
 
 const About = () =>
   <Container>
+    <Helmet>
+      <title>About</title>
+    </Helmet>
     <Navigation />
 
     <Main>
@@ -20,6 +24,9 @@ const About = () =>
 
 const NoMatch = () =>
   <Container>
+    <Helmet>
+      <title>404</title>
+    </Helmet>
     <Navigation />
 
     <Main>
