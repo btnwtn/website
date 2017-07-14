@@ -4,8 +4,9 @@ import { Helmet } from "react-helmet";
 import Container from "../../reusable/Container";
 import Main from "../../reusable/Main";
 import Navigation from "../../reusable/Navigation";
-import Title from "../../reusable/Title";
+import { default as PageTitle } from "../../reusable/Title";
 import Subtitle from "../../reusable/Subtitle";
+import ArticlePreview from "../../reusable/ArticlePreview";
 
 const Home = () =>
   <Container>
@@ -15,8 +16,18 @@ const Home = () =>
     <Navigation />
 
     <Main>
-      <Title>Brandon Newton</Title>
-      <Subtitle>Frontend Engineer making fun things in San Francisco.</Subtitle>
+      <div style={{ marginBottom: "2em" }}>
+        <PageTitle>Brandon Newton</PageTitle>
+        <Subtitle>
+          Frontend Engineer making fun things in San Francisco.
+        </Subtitle>
+      </div>
+
+      <ArticlePreview
+        title="Math: the React.js Way"
+        subtitle="React is amazing, use it for everything."
+        image="https://btnwtn.com/images/math-js-header.jpg"
+      />
     </Main>
   </Container>;
 
