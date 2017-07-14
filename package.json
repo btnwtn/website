@@ -19,5 +19,9 @@
     "build": "react-scripts build && react-snapshot && npm run compile:articles",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gray-matter": "^3.0.2",
+    "markdown-it": "^8.3.1"
   }
 }
