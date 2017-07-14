@@ -1,39 +1,45 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from "./logo.svg";
-import styled from "styled-components";
 import "./App.css";
 
-const Container = styled.div`
-  max-width: 37.5em;
-  margin-left: auto;
-  margin-right: auto;
-`;
+import SkipLink from "./components/SkipLink";
+import Container from "./reusable/Container";
+import Main from "./reusable/Main";
+import Navigation from "./reusable/Navigation";
 
-const Home = () =>
-  <Container>
-    <h1>Home</h1>
-  </Container>;
+import Home from "./pages/Home";
 
 const About = () =>
   <Container>
-    <h1>About</h1>
+    <Navigation />
+
+    <Main>
+      <h1>About</h1>
+    </Main>
   </Container>;
 
 const NoMatch = () =>
   <Container>
-    <h1>404</h1>
+    <Navigation />
+
+    <Main>
+      <h1>404</h1>
+    </Main>
   </Container>;
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route component={NoMatch} />
-        </Switch>
+        <div>
+          <SkipLink href="#content">Skip to main content</SkipLink>
+
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route component={NoMatch} />
+          </Switch>
+        </div>
       </Router>
     );
   }

@@ -1,24 +1,35 @@
-.App {
-  text-align: center;
+html {
+  box-sizing: border-box;
+  font-size: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+body {
+  background-color: #F5F5F5;
+  color: #232323;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 1.25em;
 }
 
-.App-intro {
-  font-size: large;
+a {
+  color: #006DBA;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+a:hover,
+a:active {
+  color: #1991DB;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  color: #2B2392;
+}
+a.active {
+  color: #232323;
+  background-color: #E2DDD9;
+  border-radius: 3px;
+  text-decoration: none;
 }
