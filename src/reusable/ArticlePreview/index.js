@@ -11,7 +11,6 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 160px;
   border-radius: 3px;
   background-image: url(${prop("image")});
   background-size: cover;
@@ -64,7 +63,7 @@ const Content = styled.div`
 
 const Background = styled.div`
   position: relative;
-  height: 160px;
+  height: 240px;
   overflow: hidden;
 `;
 
