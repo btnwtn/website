@@ -56,7 +56,7 @@ export const Content = styled.div`
       rgba(35, 35, 35, 1) 63%
     );
     opacity: .8;
-    transition: opacity 100ms cubic-bezier(.25, .25, .315, 1.35);
+    transition: opacity 250ms cubic-bezier(.25, .25, .315, 1.35);
   }
 
   > * {
