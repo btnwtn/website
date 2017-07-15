@@ -6,7 +6,6 @@ import Container from "../../reusable/Container";
 import Main from "../../reusable/Main";
 import Navigation from "../../reusable/Navigation";
 import Title from "../../reusable/Title";
-import Subtitle from "../../reusable/Subtitle";
 
 const YOLO = html => ({ __html: html });
 
