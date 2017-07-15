@@ -1,5 +1,6 @@
 const fs = require("fs");
 const matter = require("gray-matter");
+const twemoji = require("twemoji");
 const prism = require("markdown-it-prism");
 const slugify = require("./slugify");
 const { promisify } = require("util");
@@ -32,7 +33,7 @@ const fileToJSON = async pathToFile => {
     meta: Object.assign({}, data, {
       slug: data.title ? slugify(data.title) : ""
     }),
-    content: md.render(content.toString())
+    content: twemoji.parse(md.render(content.toString()))
   };
 };
 
