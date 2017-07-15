@@ -39,11 +39,9 @@ const fileToJSON = async pathToFile => {
 
 const buildArticles = async () => {
   const files = await getFiles();
-
   const compiled = await Promise.all(files.map(fileToJSON));
 
-  console.log("Compiled files in data/articles to md…");
-  console.log(compiled);
+  console.log(`Compiled ${compiled.length} files in data/articles to md.`);
 
   try {
     await writeFile("./src/_data/articles.json", JSON.stringify(compiled));
