@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import articles from "../../_data/articles";
+import "./prism.css";
 
 import Container from "../../reusable/Container";
 import Main from "../../reusable/Main";

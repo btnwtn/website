@@ -33,3 +33,24 @@ a.active {
   border-radius: 3px;
   text-decoration: none;
 }
+
+p {
+  line-height: 1.6;
+}
+
+code,
+pre[class*="language-"] {
+  font-family: "Operator Mono", Consolas, Hack, menlo, monaco, monospace;
+}
+
+p code {
+  padding: .2em;
+  font-size: .8em;
+  background-color: #e8e8e8;
+}
+
+pre[class*="language-"] {
+  margin: 1rem 0 !important;
+  font-size: 1rem;
+  line-height: 1;
+}
