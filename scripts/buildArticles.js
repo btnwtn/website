@@ -1,5 +1,6 @@
 const fs = require("fs");
 const matter = require("gray-matter");
+const slugify = require("../src/lib/slugify");
 const { promisify } = require("util");
 const readDir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
@@ -25,7 +26,9 @@ const fileToJSON = async pathToFile => {
   const { data, content } = matter(buf.toString());
 
   return {
-    meta: data,
+    meta: Object.assign({}, data, {
+      slug: data.title ? slugify(data.title) : ""
+    }),
     content: md.render(content.toString())
   };
 };

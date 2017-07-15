@@ -9,6 +9,7 @@ import Main from "./reusable/Main";
 import Navigation from "./reusable/Navigation";
 
 import Home from "./pages/Home";
+import Article from "./pages/Article";
 
 const About = () =>
   <Container>
@@ -44,6 +45,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
+            <Route path="/articles/:slug" component={Article} />
             <Route component={NoMatch} />
           </Switch>
         </div>
