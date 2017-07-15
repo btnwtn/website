@@ -40,7 +40,7 @@ p {
 
 code,
 pre[class*="language-"] {
-  font-family: "Operator Mono", Consolas, Hack, menlo, monaco, monospace;
+  font-family: "Operator Mono", Consolas, Hack, menlo, monaco, monospace !important;
 }
 
 p code {
