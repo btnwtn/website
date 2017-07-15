@@ -5,9 +5,6 @@ const prop = prop => props => props[prop];
 
 export const Card = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   height: 240px;
   border-radius: 3px;
   background-image: url(${prop("image")});
@@ -36,6 +33,7 @@ export const Excerpt = styled.p`margin: 0;`;
 
 export const Content = styled.div`
   position: absolute;
+  bottom: 0;
   width: 100%;
   padding: .8em;
   color: #f5f5f5;
