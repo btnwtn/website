@@ -16,6 +16,15 @@ const Image = styled.img`
   border-radius: 3px;
 `;
 
+const PublishDate = styled.p`
+  display: block;
+  margin: 0;
+  margin-bottom: .25rem;
+  font-size: .8em;
+  font-weight: bold;
+  color: #646464;
+`;
+
 const YOLO = html => ({ __html: html });
 
 const Article = props => {
@@ -32,6 +41,9 @@ const Article = props => {
 
       <Navigation />
       <Main>
+        <PublishDate>
+          {article.meta.published}
+        </PublishDate>
         <Title>
           {article.meta.title}
         </Title>

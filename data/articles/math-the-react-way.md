@@ -3,7 +3,7 @@ title: "Math: the React.js Way"
 excerpt: "With react-real-math you don't need confidence; the library handles it
 for you!"
 image: "/images/math-js-header.jpg"
-published: "Jul 14, 2017"
+published: "Nov 2, 2016"
 ---
 
 Have you found yourself doing intense math problems using weird symbols like `+`,
