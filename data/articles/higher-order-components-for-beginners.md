@@ -1,5 +1,5 @@
 ---
-title: "Higher-Order Components(HOCs) for Beginners"
+title: "Higher-Order Components (HOCs) for Beginners"
 excerpt: "A gentle introduction to Higher-Order Components"
 image: "/images/hoc-for-beginners.jpg"
 published: "Jul 15, 2017"
