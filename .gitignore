@@ -10,7 +10,7 @@
 /build
 
 # data dir
-/src/_data
+/src/_data/*
 
 # misc
 .DS_Store
