@@ -6,7 +6,7 @@ import articles from "../../_data/articles";
 import Container from "../../reusable/Container";
 import Main from "../../reusable/Main";
 import Navigation from "../../reusable/Navigation";
-import { default as PageTitle } from "../../reusable/Title";
+import Title from "../../reusable/Title";
 import Subtitle from "../../reusable/Subtitle";
 import ArticlePreview from "../../reusable/ArticlePreview";
 
@@ -28,7 +28,7 @@ const Home = () =>
 
     <Main>
       <div style={{ marginBottom: "2em" }}>
-        <PageTitle>Brandon Newton</PageTitle>
+        <Title>Brandon Newton</Title>
         <Subtitle>
           Frontend Engineer making fun things in San Francisco.
         </Subtitle>

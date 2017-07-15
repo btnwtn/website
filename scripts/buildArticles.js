@@ -1,6 +1,6 @@
 const fs = require("fs");
 const matter = require("gray-matter");
-const slugify = require("../src/lib/slugify");
+const slugify = require("./slugify");
 const { promisify } = require("util");
 const readDir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);

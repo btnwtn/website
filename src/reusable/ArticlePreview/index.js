@@ -1,14 +1,18 @@
 import React from "react";
-import slugify from "../../lib/slugify";
 import pure from "recompose/pure";
 
 import { PreviewLink, Card, Content, Title, Excerpt } from "./components";
 
-const ArticlePreview = ({ image, title, excerpt, published, url, ...rest }) => {
-  const slug = url ? url : `/articles/${slugify(title.toLowerCase())}`;
-
+const ArticlePreview = ({
+  slug,
+  image,
+  title,
+  excerpt,
+  published,
+  ...rest
+}) => {
   return (
-    <PreviewLink to={slug} {...rest}>
+    <PreviewLink to={`/articles/${slug}`} {...rest}>
       <Card image={image}>
         <Content>
           <Title>
