@@ -2,9 +2,9 @@ import React from "react";
 import slugify from "../../lib/slugify";
 import pure from "recompose/pure";
 
-import { PreviewLink, Card, Content, Title, Subtitle } from "./components";
+import { PreviewLink, Card, Content, Title, Excerpt } from "./components";
 
-const ArticlePreview = ({ image, title, subtitle, url, ...rest }) => {
+const ArticlePreview = ({ image, title, excerpt, published, url, ...rest }) => {
   const slug = url ? url : `/articles/${slugify(title.toLowerCase())}`;
 
   return (
@@ -14,9 +14,9 @@ const ArticlePreview = ({ image, title, subtitle, url, ...rest }) => {
           <Title>
             {title}
           </Title>
-          <Subtitle>
-            {subtitle}
-          </Subtitle>
+          <Excerpt>
+            {excerpt}
+          </Excerpt>
         </Content>
       </Card>
     </PreviewLink>

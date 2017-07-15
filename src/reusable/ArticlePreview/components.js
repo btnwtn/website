@@ -32,7 +32,7 @@ export const Title = styled.h2`
   margin-bottom: .1em;
 `;
 
-export const Subtitle = styled.p`margin: 0;`;
+export const Excerpt = styled.p`margin: 0;`;
 
 export const Content = styled.div`
   position: absolute;

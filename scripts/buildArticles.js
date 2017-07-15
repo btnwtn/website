@@ -1,13 +1,13 @@
 const fs = require("fs");
 const matter = require("gray-matter");
 const { promisify } = require("util");
+const readDir = promisify(fs.readdir);
+const readFile = promisify(fs.readFile);
+const writeFile = promisify(fs.writeFile);
 
 const md = require("markdown-it")({
   quotes: "“”‘’"
 });
-
-const readDir = promisify(fs.readdir);
-const readFile = promisify(fs.readFile);
 
 const DATA_PATH = "./data/articles/";
 
@@ -25,7 +25,7 @@ const fileToJSON = async pathToFile => {
   const { data, content } = matter(buf.toString());
 
   return {
-    frontmatter: data,
+    meta: data,
     content: md.render(content.toString())
   };
 };
@@ -37,6 +37,13 @@ const buildArticles = async () => {
 
   console.log("Compiled files in data/articles to md…");
   console.log(compiled);
+
+  try {
+    await writeFile("./src/_data/articles.json", JSON.stringify(compiled));
+    console.log("Wrote files to src/_data/articles.json");
+  } catch (error) {
+    throw error;
+  }
 };
 
 buildArticles();
