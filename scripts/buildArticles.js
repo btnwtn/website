@@ -1,9 +1,12 @@
 const fs = require("fs");
+const mkdirp = require("mkdirp");
 const matter = require("gray-matter");
 const twemoji = require("twemoji");
 const prism = require("markdown-it-prism");
 const slugify = require("./slugify");
 const { promisify } = require("util");
+
+const mkdir = promisify(mkdirp);
 const readDir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
@@ -44,6 +47,7 @@ const buildArticles = async () => {
   console.log(`Compiled ${compiled.length} files in data/articles to md.`);
 
   try {
+    await mkdir("./src/_data");
     await writeFile("./src/_data/articles.json", JSON.stringify(compiled));
     console.log("Wrote files to src/_data/articles.json");
   } catch (error) {
