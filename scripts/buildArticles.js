@@ -1,5 +1,6 @@
 const fs = require("fs");
 const matter = require("gray-matter");
+const prism = require("markdown-it-prism");
 const slugify = require("./slugify");
 const { promisify } = require("util");
 const readDir = promisify(fs.readdir);
@@ -9,6 +10,8 @@ const writeFile = promisify(fs.writeFile);
 const md = require("markdown-it")({
   quotes: "“”‘’"
 });
+
+md.use(prism, {});
 
 const DATA_PATH = "./data/articles/";
 
