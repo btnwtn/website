@@ -50,7 +50,8 @@ pre[class*="language-"] {
   font-family: "Operator Mono", Consolas, Hack, menlo, monaco, monospace !important;
 }
 
-p code {
+p code,
+a code {
   padding: .2em;
   font-size: .8em;
   background-color: #e8e8e8;
