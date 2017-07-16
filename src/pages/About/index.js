@@ -6,6 +6,7 @@ import Main from "../../reusable/Main";
 import Navigation from "../../reusable/Navigation";
 import Section from "../../reusable/Section";
 import Title from "../../reusable/Title";
+import SectionImage from "../../reusable/SectionImage";
 
 const About = () =>
   <Container>
@@ -17,6 +18,7 @@ const About = () =>
     <Main>
       <Section>
         <Title>About</Title>
+        <SectionImage src="/images/profile.jpg" />
       </Section>
     </Main>
   </Container>;
