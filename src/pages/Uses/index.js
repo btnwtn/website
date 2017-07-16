@@ -45,6 +45,11 @@ const Uses = () =>
           great starting point for any vim configuration.
         </li>
         <li>
+          <a href="https://github.com/kien/ctrlp.vim">ctrlp</a>, fuzzy finding
+          matching. Going to be giving{" "}
+          <a href="https://github.com/junegunn/fzf.vim">fzf</a> a shot soon.
+        </li>
+        <li>
           <a href="https://github.com/othree/yajs.vim">yajs.vim</a>, Javascript
           syntax.
         </li>
