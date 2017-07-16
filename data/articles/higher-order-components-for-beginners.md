@@ -332,5 +332,5 @@ Here are some exercises to solidify your understanding of HOCs:
 
 - Write an HOC that reverses it's input
 - Write an HOC that supplies data from an API to it's Passed Component
-- Write an HOC that implements [`shouldComponentUpdate`](https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate) [`to avoid reconciliation`](https://facebook.github.io/react/docs/optimizing-performance.html#avoid-reconciliation).
+- Write an HOC that implements [`shouldComponentUpdate`](https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate) [to avoid reconciliation](https://facebook.github.io/react/docs/optimizing-performance.html#avoid-reconciliation).
 - Write an HOC that uses [`React.Children.toArray`](https://facebook.github.io/react/docs/react-api.html#react.children.toarray) to sort the children passed to it's Passed Component.
