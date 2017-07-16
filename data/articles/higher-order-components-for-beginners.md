@@ -245,7 +245,7 @@ const Title = (props) => <h1>{props.children}</h1>
 //=> <h1>Higher-Order Components(HOCs) for React Newbies</h1>
 ```
 
-A Higher-Order Component ==is a function that accepts a Component as an argument and returns a Component== How you use the passed Component is up to you. You can even completely disregard it:
+A Higher-Order Component ==is a function that accepts a Component as an argument and returns a Component==. How you use the passed Component is up to you. You can even completely disregard it:
 
 ```js
 // Technically an HOC
