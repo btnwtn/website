@@ -1,4 +1,5 @@
 ---
+slug: "higher-order-components-for-beginners"
 title: "Higher-Order Components (HOCs) for Beginners"
 excerpt: "A gentle introduction to Higher-Order Components"
 image: "/images/hoc-for-beginners.jpg"

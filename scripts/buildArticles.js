@@ -31,11 +31,10 @@ const getFiles = async () => {
 const fileToJSON = async pathToFile => {
   const buf = await readFile(pathToFile);
   const { data, content } = matter(buf.toString());
+  const slug = data.slug ? data.slug : data.title ? slugify(data.title) : "";
 
   return {
-    meta: Object.assign({}, data, {
-      slug: data.title ? slugify(data.title) : ""
-    }),
+    meta: Object.assign({}, data, { slug }),
     content: twemoji.parse(md.render(content.toString()))
   };
 };
