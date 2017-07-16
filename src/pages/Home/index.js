@@ -30,7 +30,7 @@ const Home = () =>
       <Section>
         <Title>Brandon Newton</Title>
         <Subtitle>
-          Frontend Engineer making fun things in San Francisco.
+          Frontend Engineer making fun stuff in San Francisco.
         </Subtitle>
       </Section>
 

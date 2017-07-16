@@ -20,6 +20,11 @@ const About = () =>
         <Title>About</Title>
         <SectionImage src="/images/profile.jpg" />
       </Section>
+
+      <p>
+        I am a self-taught Frontend Engineer currently residing in San
+        Francisco.
+      </p>
     </Main>
   </Container>;
 

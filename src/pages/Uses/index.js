@@ -50,16 +50,16 @@ const Uses = () =>
           <a href="https://github.com/junegunn/fzf.vim">fzf</a> a shot soon.
         </li>
         <li>
+          <a href="https://github.com/sbdchd/neoformat">Neoformat</a>, runs{" "}
+          <a href="https://github.com/prettier/prettier">Prettier</a> on save.
+        </li>
+        <li>
           <a href="https://github.com/othree/yajs.vim">yajs.vim</a>, Javascript
           syntax.
         </li>
         <li>
           <a href="https://github.com/mxw/vim-jsx">vim-jsx</a>, JSX support for
           Vim.
-        </li>
-        <li>
-          <a href="https://github.com/sbdchd/neoformat">Neoformat</a>, runs{" "}
-          <a href="https://github.com/prettier/prettier">Prettier</a> on save.
         </li>
       </ul>
     </Main>
