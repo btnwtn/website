@@ -47,6 +47,8 @@ function person(name) {
 }
 ```
 
+Read the [arrow function documentation on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for a more complete understanding.
+
 ## Functions as Values and Partial Application
 
 Just like numbers, strings, booleans, etc., *functions are values*. That means
@@ -153,7 +155,7 @@ const Button = styled.button`
 <Button theme={themes.primary}>Submit</Button>
 ```
 
-This is a prime example of partial application. We create a function that accepts a string as a parameter: `fromTheme("textColor")`, which returns a function accepting an object with a `theme` property: `({ theme }) => theme[prop]`, which we then attempt to lookup via the initial string we passed in `"textColor"`. We could go furthur and write functions like `backgroundColor` and `textColor` that partially apply the `fromTheme` function:
+We create a function that accepts a string as a parameter: `fromTheme("textColor")`, which returns a function accepting an object with a `theme` property: `({ theme }) => theme[prop]`, which we then attempt to lookup via the initial string we passed in `"textColor"`. We could go further and write functions like `backgroundColor` and `textColor` that partially apply the `fromTheme` function:
 
 ```js
 const fromTheme = (prop) => ({ theme }) => theme[prop]
@@ -194,7 +196,7 @@ const map = (fn, array) => {
 }
 ```
 
-We can then use our version of `map` to do something like square an array of numbers:
+We can then use our `map` to do something like square an array of numbers:
 
 ```js
 const square = (x) => x * x
@@ -234,7 +236,7 @@ const HeroList = ({ heroes }) => (
 
 ## Higher-Order Components
 
-We know that a higher-order function is a function that accepts a function as an argument. In React, any function that returns JSX is known as a Stateless Functional Component, or Functional Component for short. A basic Functional Component looks like this:
+We know that a higher-order function is a function that accepts a function as an argument. In React, any function that returns [`JSX`](https://facebook.github.io/react/docs/jsx-in-depth.html) is known as a Stateless Functional Component, or Functional Component for short. A basic Functional Component looks like this:
 
 ```js
 const Title = (props) => <h1>{props.children}</h1>
@@ -254,7 +256,7 @@ const IgnoreHeroList = ignore(HeroList)
 //=> <h1>:)</h1>
 ```
 
-You can write an HOC that uppercases it's input:
+You can write an HOC that transforms it's input to uppercase:
 
 ```js
 const yell = (PassedComponent) =>
@@ -270,7 +272,7 @@ const AngryTitle = yell(Title)
 //=> <h1>WHATEVER!</h1>
 ```
 
-You can return a Stateful Component because classes in Javascript are syntax sugar for functions. This allows you to hook into React Lifecycle methods like `componentDidMount`. This is where HOCs become really useful. We can now do things like pass down the result of an HTTP request as props to a Functional Component.
+You can also return a Stateful Component, because classes in Javascript are syntax sugar for functions. This allows you to hook into React Lifecycle methods like `componentDidMount`. This is where HOCs become really useful. We can now do things like pass down the result of an HTTP request as props to a Functional Component.
 
 ```js
 const withGists = (PassedComponent) =>
@@ -326,7 +328,7 @@ want to.
 Try to keep your HOCs simple, and aim to write code that doesn't require you to read
 a long article to understand it.
 
-## Additional Exercises
+### Additional Exercises
 
 Here are some exercises to solidify your understanding of HOCs:
 
