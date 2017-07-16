@@ -247,7 +247,7 @@ A Higher-Order Component **is a function that accepts a Component as an argument
 
 ```js
 // Technically an HOC
-const ignore = (Anything) => (props) => <h1>:)</h1>
+const ignore = (anything) => (props) => <h1>:)</h1>
 
 const IgnoreHeroList = ignore(HeroList)
 <IgnoreHeroList />
@@ -281,9 +281,9 @@ const withGists = (PassedComponent) =>
 
     componentDidMount() {
       fetch("https://api.github.com/gists/public")
-      .then(r => r.json())
-      .then(gists => this.setState({
-        gists
+      .then((r) => r.json())
+      .then((gists) => this.setState({
+        gists: gists
       }))
     }
 
