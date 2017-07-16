@@ -290,7 +290,12 @@ const withGists = (PassedComponent) =>
     }
 
     render() {
-      return <PassedComponent {...this.props} gists={this.state.gists} />
+      return (
+        <PassedComponent
+          {...this.props}
+          gists={this.state.gists}
+        />
+      )
     }
   }
 
