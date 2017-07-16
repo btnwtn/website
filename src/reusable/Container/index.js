@@ -7,6 +7,10 @@ const Container = styled.main`
   margin-left: auto;
   margin-right: auto;
 
+  ${MQ.Tablet} {
+    padding: 1.5em;
+  }
+
   ${MQ.Mobile} {
     padding: 1em;
   }

@@ -1,3 +1,5 @@
 export const MQ = {
-  Mobile: "@media (max-width: 426px)"
+  Toy: "@media (max-width: 400px)",
+  Mobile: "@media (max-width: 426px)",
+  Tablet: "@media (max-width: 768px)"
 };

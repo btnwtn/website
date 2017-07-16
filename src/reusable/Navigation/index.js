@@ -20,6 +20,10 @@ const Nav = styled.nav`
   align-items: baseline;
   margin-bottom: 3em;
 
+  ${MQ.Mobile} {
+    flex-wrap: wrap;
+  }
+
   a:not(:last-child) {
     margin-right: 1em;
 
@@ -34,6 +38,12 @@ const SiteTitle = NavLink.withComponent("span").extend`
   margin-right: auto;
   padding-left: 0;
   font-size: .7em;
+
+  ${MQ.Toy} {
+    padding: 0;
+    margin-bottom: .75em;
+    width: 100%;
+  }
 `;
 
 const Navigation = () =>
