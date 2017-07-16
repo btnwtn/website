@@ -35,7 +35,7 @@ const Article = props => {
     <Container>
       <Helmet>
         <title>
-          {article.meta.title}
+          {article.meta.title} ✴ Brandon Newton
         </title>
       </Helmet>
 

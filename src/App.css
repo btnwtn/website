@@ -66,3 +66,7 @@ pre[class*="language-"] {
   font-size: 1rem;
   line-height: 1;
 }
+
+ul li {
+  margin-bottom: .5em;
+}
