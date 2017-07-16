@@ -315,7 +315,7 @@ You can call `withGists` on any component and it will pass down the result of th
 
 ## Conclusion: HOCs are 🔥🔥🔥
 
-Redux uses an HOC, `connect()` to pass values from your application store to "connected" components. It also does some error checking and component lifecycle optimizations that, if done manually would cause you to write a ton of boilerplate code.
+Redux uses an HOC, [`connect`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) to pass values from your application store to "connected" components. It also does some error checking and component lifecycle optimizations that, if done manually would cause you to write a ton of boilerplate code.
 
 If you find yourself writing a lot of code in different places that does the same thing, you may be able to refactor that code into a reusable HOC.
 
