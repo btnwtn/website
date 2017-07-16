@@ -16,6 +16,7 @@ const md = require("markdown-it")({
 });
 
 md.use(prism, {});
+md.use(require("markdown-it-mark"));
 
 const DATA_PATH = "./data/articles/";
 

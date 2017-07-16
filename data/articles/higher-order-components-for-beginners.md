@@ -6,7 +6,7 @@ image: "/images/hoc-for-beginners.jpg"
 published: "Jul 16, 2017"
 ---
 
-## Introduction
+## Preface
 
 I'm writing this because every other article—including the official
 React documentation on Higher-Order Components—confused the hell out of me as a
@@ -325,8 +325,8 @@ HOCs are really expressive and you can build a lot of cool things with them.
 However, because they are so expressive you can go overboard with them if you
 want to.
 
-Try to keep your HOCs simple, and aim to write code that doesn't require you to read
-a long article to understand it.
+Try to keep your HOCs simple, and ==aim to write code that doesn't require you to read
+a long article to understand it==.
 
 ### Additional Exercises
 

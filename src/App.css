@@ -38,6 +38,10 @@ p {
   line-height: 1.6;
 }
 
+mark {
+  background-color: #ffffb4;
+}
+
 img.emoji {
   height: 1em;
   width: 1em;
