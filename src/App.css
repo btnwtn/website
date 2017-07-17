@@ -51,7 +51,9 @@ img.emoji {
 
 code,
 pre[class*="language-"] {
-  font-family: "Operator Mono", Consolas, Hack, menlo, monaco, monospace !important;
+  font-family: "Operator Mono Medium", "Operator Mono", Consolas, Hack,
+                menlo, monaco, monospace !important;
+  font-weight: 400;
 }
 
 p code,
