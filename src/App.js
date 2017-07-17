@@ -14,6 +14,17 @@ import Uses from "./pages/Uses";
 import Articles from "./pages/Articles";
 import Article from "./pages/Article";
 
+const withPageView = PassedComponent => props => {
+  window.ga(
+    "set",
+    "page",
+    `${window.location.pathname}${window.location.search}`
+  );
+  window.ga("send", "pageview");
+
+  return <PassedComponent {...props} />;
+};
+
 const NoMatch = () =>
   <Container>
     <Helmet>
@@ -34,12 +45,12 @@ class App extends Component {
           <SkipLink href="#content">Skip to main content</SkipLink>
 
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/uses" component={Uses} />
-            <Route exact path="/articles" component={Articles} />
-            <Route path="/articles/:slug" component={Article} />
-            <Route component={NoMatch} />
+            <Route exact path="/" component={withPageView(Home)} />
+            <Route exact path="/about" component={withPageView(About)} />
+            <Route exact path="/uses" component={withPageView(Uses)} />
+            <Route exact path="/articles" component={withPageView(Articles)} />
+            <Route path="/articles/:slug" component={withPageView(Article)} />
+            <Route component={withPageView(NoMatch)} />
           </Switch>
         </div>
       </Router>
