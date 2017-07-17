@@ -31,6 +31,26 @@ const Article = props => {
         <title>
           {article.meta.title} ✴ Brandon Newton
         </title>
+
+        <meta name="description" content={article.meta.excerpt} />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@bitwiselover" />
+        <meta name="twitter:title" content={article.meta.title} />
+        <meta name="twitter:description" content={article.meta.excerpt} />
+        <meta name="twitter:creator" content="@bitwiselover" />
+
+        <meta name="twitter:image" content={article.meta.image} />
+
+        <meta property="og:title" content={article.meta.title} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content={`https://btnwtn.com/articles/${article.meta.slug}`}
+        />
+        <meta property="og:image" content={article.meta.image} />
+        <meta property="og:description" content={article.meta.excerpt} />
+        <meta property="og:site_name" content="Brandon Newton" />
       </Helmet>
 
       <Navigation />
