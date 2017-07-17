@@ -40,7 +40,10 @@ const Article = props => {
         <meta name="twitter:description" content={article.meta.excerpt} />
         <meta name="twitter:creator" content="@bitwiselover" />
 
-        <meta name="twitter:image" content={article.meta.image} />
+        <meta
+          name="twitter:image"
+          content={`https://btnwtn.com${article.meta.image}`}
+        />
 
         <meta property="og:title" content={article.meta.title} />
         <meta property="og:type" content="article" />
@@ -48,7 +51,10 @@ const Article = props => {
           property="og:url"
           content={`https://btnwtn.com/articles/${article.meta.slug}`}
         />
-        <meta property="og:image" content={article.meta.image} />
+        <meta
+          property="og:image"
+          content={`https://btnwtn.com${article.meta.image}`}
+        />
         <meta property="og:description" content={article.meta.excerpt} />
         <meta property="og:site_name" content="Brandon Newton" />
       </Helmet>
