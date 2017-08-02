@@ -2,13 +2,13 @@
 title: Partial Application for Beginners
 excerpt: "Understanding partial application."
 image: "/images/partial-application-header.jpg"
-published: "Aug 2, 2016"
+published: "Aug 2, 2017"
 ---
 
 ## Why Use Partial Application?
 
-Partial application is a core concept for writing <abbr title="Don't Repeat
-Yourself">DRY</abbr> and expressive code. You can use partial application to
+Partial application is a core concept for writing DRY (Don't Repeat
+Yourself) and expressive code. You can use partial application to
 compose and create new functions, and turn code like this:
 
 ```js
