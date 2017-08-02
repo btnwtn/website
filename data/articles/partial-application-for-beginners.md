@@ -125,7 +125,7 @@ add.length
 ### Closures
 
 We know that we can use a function expression to return a function from a
-function. We can make use of this behaviour by returning functions that
+function. We can make use of this behavior by returning functions that
 "remember" values from the functions they were returned from. Sounds confusing,
 but it is actually somewhat simple:
 
